@@ -29,6 +29,7 @@ pycodestyle==2.5.0
 pylint==2.4.4
 pymongo==3.10.1
 python-dateutil==2.7.5
+python-dotenv==0.16.0
 pytz==2019.3
 PyYAML==3.13
 regex==2020.4.4
