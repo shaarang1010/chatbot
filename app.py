@@ -2,10 +2,14 @@ from flask import Flask, request, jsonify, render_template, url_for, redirect
 from flask_cors import CORS, cross_origin
 from bot_scripts.bot import Bot
 import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'MoveAwayFromHer'
+
+load_dotenv()
+
+app.config['SECRET_KEY'] = os.getenv('APP_SECRET')
 
 CORS(app)
 
