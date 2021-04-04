@@ -88,7 +88,7 @@ class Bot:
         ],
         [
             r"(.*) do you do?",
-            ["I dont know what I do, you know. I am just a clown, you know.",
+            ["I dont know what I do, you know. I am OVERARCHING , you know.",
              "I dont attend work, just go on trips", "You know, ...., you know, .... you know, ..., ask Fei"]
         ],
         [
@@ -96,8 +96,8 @@ class Bot:
             ["We dont have any money", "Ask Fei!"]
         ],
         [
-            r"(.*) something random",
-            ["Sigh view am high neat, half to what. Sent late held than, set why wife our. If an blessing, building steepest. Agreement distrusts, mrs six affection, satisfied. Day blushes visitor end company old  prevent chapter. Consider declared out expenses her concerns. No at indulgence conviction particular unsatiable boisterous discretion. Direct enough off others, say eldest may exeter she. Possible all ignorant , supplied get settling,  marriage recurred.",]
+            r"(.*) service points",
+            ["We should be OVERARCHING the department", "You know ... Jinli... Lianhua... You know, know"]
         ],
         [
             r"quit",

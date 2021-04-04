@@ -16,9 +16,10 @@ CORS(app)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 
-@app.route('/bottest', methods=['GET'])
+@app.route('/bottest', methods=['POST'])
 def bot_test():
-    bot = Bot('Mr.Duh')
+    args= request.get_json(force=True)
+    bot = Bot(args['botname'])
     status = 200
     try:
         test_message = bot.bot_test()
