@@ -15,7 +15,7 @@ class Bot:
         ],
         [
             r"what is your name ?",
-            ["My name is Financy and I handle budgeting around here ", ]
+            ["My name is ASM and I am a cyberpunk ", ]
         ],
         [
             r"how are you ?",
@@ -40,7 +40,7 @@ class Bot:
         ],
         [
             r"(.*) do you do?",
-            ["I do finance", "I do casuals", "I am the right hand!"]
+            ["I do Research and teaching, do you want to collaborate", "I am a shit stirrer and post stuff on facebook", "I am the CYBERPUNK!!"]
         ],
         [
             r"(.*) money",
@@ -107,7 +107,7 @@ class Bot:
 
     def chat(self, question):
         response = ''
-        if self.name == 'Financy':
+        if self.name == 'ASM':
             chat = Chat(self.financy_pairs, reflections)
         elif self.name == 'Mr.Duh':
             chat = Chat(self.henry_pairs, reflections)

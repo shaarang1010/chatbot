@@ -18,7 +18,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 @app.route('/bottest', methods=['POST'])
 def bot_test():
-    args= request.get_json(force=True)
+    args = request.get_json(force=True)
     bot = Bot(args['botname'])
     status = 200
     try:
@@ -26,7 +26,7 @@ def bot_test():
         bot_name = bot.get_name()
     except Exception as e:
         status = 400
-    return jsonify({'value':test_message, 'botname': bot_name}), status
+    return jsonify({'value': test_message, 'botname': bot_name}), status
 
 
 @app.route('/converse', methods=['POST'])
@@ -40,14 +40,20 @@ def converse():
         response = bot.chat(user_question)
     except Exception as e:
         response = str(e)
-    return jsonify({"data":{'version':'1.0','msg':response, 'status':status}}), status
+    return jsonify({"data": {'version': '1.0', 'msg': response, 'status': status}}), status
 
 
+@app.route('/getbots', methods=['POST'])
+def get_bots():
+    bot_list = [{'name': 'Mr.Duh', 'value': 'Mr.Duh'},
+                {'name': 'ASM Facebook', 'value': 'ASM'}]
+    return jsonify({'data': {'version': '1.0', 'bots': bot_list}}), 200
 
 
 @app.route('/test', methods=['GET'])
 def test_func():
-    return jsonify({'value':'ok'}), 200
+    return jsonify({'value': 'ok'}), 200
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000', debug=True)
