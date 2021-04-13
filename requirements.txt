@@ -22,7 +22,6 @@ mathparse==0.1.2
 mccabe==0.6.1
 murmurhash==1.0.2
 nltk==3.5
-numpy==1.18.3
 Pint==0.11
 plac==0.9.6
 preshed==2.0.1
@@ -39,7 +38,6 @@ regex==2020.4.4
 requests==2.23.0
 six==1.14.0
 spacy==2.1.9
-SQLAlchemy==1.2.19
 srsly==1.0.2
 thinc==7.0.8
 tqdm==4.45.0
