@@ -8,7 +8,7 @@ class Bot:
     def get_name(self):
         return self.name
 
-    financy_pairs = [
+    asm_pairs = [
         [
             r"my name is (.*)",
             ["Hello %1, How are you today ?", ]
@@ -34,8 +34,8 @@ class Bot:
             ["Hello", "Hey there", ]
         ],
         [
-            r"Can I get (.*) for my subject ?",
-            ["No. Ask Duh", ]
+            r"Do you (.*) research ?",
+            ["I do research,... blah and more blah.. more grant blah", ]
 
         ],
         [
@@ -43,12 +43,12 @@ class Bot:
             ["I do Research and teaching, do you want to collaborate", "I am a shit stirrer and post stuff on facebook", "I am the CYBERPUNK!!"]
         ],
         [
-            r"(.*) money",
-            ["Provide receipts", "Apply through expensify", ]
+            r"(.*) research",
+            ["Mhmm ... we should collaborate",]
         ],
         [
-            r"(.*) subject budget? ",
-            ["We dont have any money", "Ask HOD"]
+            r"(.*) facebook? ",
+            ["I wake up ", "Ask HOD"]
         ],
         [
             r"quit",
@@ -96,7 +96,11 @@ class Bot:
             ["We dont have any money", "Ask Fei!"]
         ],
         [
-            r"(.*) service points",
+            r"(.*) subject development? ",
+            ["Some bullshit, .... some more bullshit, no they can't because they are not from China", "Ask Fei!"]
+        ],
+        [
+            r"(.*) career success",
             ["We should be OVERARCHING the department", "You know ... Jinli... Lianhua... You know, know"]
         ],
         [
@@ -108,7 +112,7 @@ class Bot:
     def chat(self, question):
         response = ''
         if self.name == 'ASM':
-            chat = Chat(self.financy_pairs, reflections)
+            chat = Chat(self.asm_pairs, reflections)
         elif self.name == 'Mr.Duh':
             chat = Chat(self.henry_pairs, reflections)
             if ("something random" in question) == True:
